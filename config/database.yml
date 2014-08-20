@@ -1,0 +1,6 @@
+adapter: mysql2 
+database: answer
+username: root
+password: Riqwan1!
+host: localhost
+port: 9999

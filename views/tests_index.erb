@@ -1,0 +1,14 @@
+
+	<div class="login-box col-md-12">
+		<h2 class="test-box">Available Tests</h2>
+		<ul class="list-unstyled">
+		<% @test.each do |test| %>
+			<div class="test-box col-md-4">
+			  <li class="col-md-12">
+			    <h2 style="margin: 0 0 15px;text-align:center;"><%= test.test_name %></h2> 
+			    <div class="col-md-3"></div><a class="btn btn-primary col-md-6" href="/test/<%= test.id %>" role="button">Start Test</a><div class="col-md-3"></div>
+			  </li>
+			 </div>
+		<% end %>
+		</ul> 
+	</div>

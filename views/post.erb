@@ -1,0 +1,13 @@
+<article> 
+	<header>
+		<h1>
+			<a href="<%= url(article.slug) %>"><%= article.slug %></a>
+			<%= article.a %>
+		</h1>
+		<time class="timeago" datetime="<%= article.date.xmlschema %>">
+	<%= article.created_at %> </time>
+	</header>
+	<section class="content">
+		<%= markdown article.content %> 
+	</section>
+</article>

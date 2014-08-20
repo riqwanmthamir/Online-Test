@@ -1,0 +1,10 @@
+1. User signup and authentication
+2. Every user can add an article
+3. Every user can comment on other peoples and his articles
+4. Delete only his comment
+5. logout
+
+Authentication with sinatra (Gem / Library) => Authentication
+Sinatra and mailer works => Signup
+Sinatra and activerecord (model) (Mysql) => Signup & articles
+ActiveRecord relationships articles has_many comments => Comments

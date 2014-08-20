@@ -1,0 +1,56 @@
+<h2><%= @test.test_name %></h2>
+
+<div class="clock" style="margin:2em; position: fixed; top: 70px; right: 0; z-index: 9999;"></div>
+
+<% @questions.each do |question| %>
+<div class="answer-box col-md-12">
+<h2 style="margin:0;"><%= question.question_title %></h2></br>
+
+<form action="/results/<%=@test.id%>" method="POST">
+
+	<div class="row">
+	  <div class="fix col-lg-6">
+	    <div class="input-group">
+	      <span class="input-group-addon">
+	        <input type="radio" name="answer<%=question.id%>" value="<%= question.answers.first.a %>">
+	      </span>
+	      <input type="text" class="form-control" placeholder="<%= question.answers.first.a %>" disabled>
+	    </div><!-- /input-group -->
+	  </div><!-- /.col-lg-6 -->
+
+	  <div class="col-lg-6">
+	    <div class="fix input-group">
+	      <span class="input-group-addon">
+	        <input type="radio" name="answer<%=question.id%>" value="<%= question.answers.first.b %>">
+	      </span>
+	      <input type="text" class="form-control" placeholder="<%= question.answers.first.b %>" disabled>
+	    </div><!-- /input-group -->
+	  </div><!-- /.col-lg-6 -->
+
+	  <div class="col-lg-6">
+	    <div class="fix input-group">
+	      <span class="input-group-addon">
+	        <input type="radio" name="answer<%=question.id%>" value="<%= question.answers.first.c %>">
+	      </span>
+	      <input type="text" class="form-control" placeholder="<%= question.answers.first.c %>" disabled>
+	    </div><!-- /input-group -->
+	  </div><!-- /.col-lg-6 -->
+
+	  <div class="col-lg-6">
+	    <div class="fix input-group">
+	      <span class="input-group-addon">
+	        <input type="radio" name="answer<%=question.id%>" value="<%= question.answers.first.d %>">
+	      </span>
+	      <input type="text" class="form-control" placeholder="<%= question.answers.first.d %>" disabled>
+	    </div><!-- /input-group -->
+	  </div><!-- /.col-lg-6 -->
+
+
+	</div><!-- /.row -->
+
+</div>
+<% end %>
+<div class="container">
+	<center><input class="kundi btn btn-primary col-md-2" type="submit" value="submit"></center>
+</div>
+</form>

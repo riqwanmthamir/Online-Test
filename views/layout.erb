@@ -1,0 +1,91 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>SRM Placement Test</title>
+
+    <link href="../css/style-text.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/flipclock.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../js/flipclock.js"></script> 
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/fancy.css" rel="stylesheet">
+
+
+    <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+
+
+  </head>
+
+  <body cz-shortcut-listen="true">
+    
+    <div class="masthead clearfix">
+      <div class="inner">
+        <div class="container">
+          <a href="/"><h3 class="masthead-brand">Placement Test</h3></a>
+          <ul class="nav masthead-nav drop">
+          <% if !check_login? %>
+            <li><a href="/login">Login</a></li>
+          <% else %>
+
+            <li><a>Hello <%= session[:username] %></a></li>
+            <!-- <li><a href="/test/new">Add Test</a></li>
+            <li><a href="/question/new">Add Questions</a></li> -->
+            <li><a href="/logout">Logout</a></li>
+          <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <%= yield %> 
+      </div>
+    </div>
+  
+    <div class="footer">
+      <div class="container">
+        <p class="text-muted">Created by Riqwan & Kaushik</p>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var clock = $('.clock').FlipClock(1800, {
+        countdown: true,
+        clockFace: 'MinuteCounter',
+        stop: function() {
+        window.location.href="file:///Users/kaushikshanmugam/Desktop/textillate-master/index.html"
+      },
+      });
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/blog.js"></script>
+    <script src="../js/jquery.fittext.js"></script>
+    <script src="../js/jquery.lettering.js"></script>
+    <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+    <script src="../js/jquery.textillate.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+      $('.tlt').textillate({ 
+      in: { effect: 'flash' },
+      out: { effect: 'foldUnfold', sync: false },
+      loop: true
+    });
+
+      </script>
+
+
+
+</body></html>
